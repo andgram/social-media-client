@@ -7,6 +7,7 @@ export default [
     languageOptions: {
       globals: {
         ...globals.browser,
+        cy: true,
         jest: true,
         describe: true,
         it: true,
