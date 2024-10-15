@@ -5,7 +5,17 @@ import prettier from 'eslint-plugin-prettier';
 export default [
   {
     languageOptions: {
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        jest: true,
+        describe: true,
+        it: true,
+        beforeEach: true,
+        afterEach: true,
+        expect: true,
+        global: true,
+        require: true,
+      },
     },
     rules: {
       'prettier/prettier': 'error',
